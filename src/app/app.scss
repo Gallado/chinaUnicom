@@ -49,3 +49,32 @@ ul,li{ padding:0;margin:0;list-style:none}
 ion-app.md [padding] .scroll-content{
   padding: 0 !important;
 }
+.scroll-content{
+  padding: 0 !important;
+}
+
+
+ion-app.md{
+  font-size: 14px;
+}
+.content-md{
+  background-color: #e7e7e7;
+}
+
+.icon{
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*width:16px;
+  height: 16px;*/
+
+}
+.img{
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:100%;
+  height: 100%;
+}

@@ -1,0 +1,247 @@
+person-center {
+  .user-info{
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: rgba(255,6,20,.6);
+    position: relative;
+    padding: 55px 15px
+  }
+  .person-title{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    height: 50px;
+  }
+  .person-title p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+  }
+  .login-image{
+    width: 80px;
+    height: 80px;
+
+  }
+  .login-image img{
+    border-radius: 80px;
+  }
+  .login-info{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+
+  }
+  .login-info p{
+    padding: 5px 0;
+  }
+  .net-tips{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+
+  }
+  .net-tips p{
+    padding: 5px 15px;
+  }
+
+
+  .another-info{
+    background-color: #fff;
+    border-bottom: 1px solid #d5d5d5;
+
+  }
+  .another-info ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .another-info ul li{
+    flex: 0.3333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+
+  }
+  .another-info ul li p{
+    padding: 5px 0;
+
+  }
+
+
+  .business-item{
+    background-color: #fff;
+    margin: 15px 0;
+    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+
+  }
+  .business-item .item-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0 15px;
+
+  }
+  .business-item .item-title p{
+    padding: 0 15px;
+  }
+  .business-item .item-list{
+
+  }
+  .business-item .item-list ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: row wrap;
+
+  }
+  .business-item .item-list ul li{
+    flex: 0.25;
+    width: 25%;
+    min-width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #d5d5d5;
+
+  }
+  .business-item .item-list ul li:last-child{
+    border-bottom: none;
+  }
+  .business-item .item-list ul li p{
+    padding-top: 10px;
+
+  }
+
+
+  .myBusiness{
+    background-image: url(../../assets/imgs/personCenter/business.png);
+    width: 24px;
+    height: 24px;
+
+  }
+  .sim{
+    background-image: url(../../assets/imgs/personCenter/sim.png);
+    width: 24px;
+    height: 24px;
+  }
+  .myInfo{
+    background-image: url(../../assets/imgs/personCenter/myinfo.png);
+    width: 24px;
+    height: 24px;
+  }
+  .liuliang{
+    background-image: url(../../assets/imgs/personCenter/liuliang.png);
+    width: 24px;
+    height: 24px;
+  }
+  .toUser{
+    background-image: url(../../assets/imgs/personCenter/touser.png);
+    width: 24px;
+    height: 24px;
+  }
+  .signIn{
+    background-image: url(../../assets/imgs/personCenter/signin.png);
+    width: 24px;
+    height: 24px;
+  }
+  .myOrder{
+    background-image: url(../../assets/imgs/personCenter/order.png);
+    width: 24px;
+    height: 24px;
+  }
+  .tree{
+    background-image: url(../../assets/imgs/personCenter/tree.png);
+    width: 24px;
+    height: 24px;
+  }
+  .buy{
+    background-image: url(../../assets/imgs/personCenter/buy.png);
+    width: 24px;
+    height: 24px;
+  }
+  .account{
+    background-image: url(../../assets/imgs/personCenter/user.png);
+    width: 24px;
+    height: 24px;
+  }
+
+  .list-info{
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+
+  }
+  .list-info ul{
+    padding: 0 0 0 15px;
+
+  }
+  .list-info ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid #d5d5d5;
+
+  }
+  .list-info ul li:last-child{
+    border-bottom: none;
+  }
+  .list-info ul li p{
+    padding: 0 15px;
+  }
+  .list-info ul li span{
+    color: #d6d6d6;
+
+  }
+
+  .setting{
+    background-image: url(../../assets/imgs/personCenter/setting.png);
+    width: 24px;
+    height: 24px;
+  }
+  .safety{
+    background-image: url(../../assets/imgs/personCenter/safety.png);
+    width: 24px;
+    height: 24px;
+  }
+  .customer{
+    background-image: url(../../assets/imgs/personCenter/customer.png);
+    width: 24px;
+    height: 24px;
+  }
+  .agree{
+    background-image: url(../../assets/imgs/personCenter/agree.png);
+    width: 24px;
+    height: 24px;
+  }
+  .message{
+    background-image: url(../../assets/imgs/personCenter/message.png);
+    width: 24px;
+    height: 24px;
+  }
+  .version{
+    background-image: url(../../assets/imgs/personCenter/version.png);
+    width: 24px;
+    height: 24px;
+  }
+
+}

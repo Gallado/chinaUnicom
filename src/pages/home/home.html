@@ -1,10 +1,65 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <ion-title>首页</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content class="content" padding>
+  <div class="home-title">
+    <div class="title-bar">
+      <div class="location">
+        <p>陕西</p>
+      </div>
+      <div class="operate-bar">
+        <ul>
+          <li>
+            <i class="icon search"></i>
+          </li>
+          <li>
+            <i class="icon scanner"></i>
+          </li>
+          <li>
+            <i class="icon message"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="show-scroll" *ngIf="scrollToTop">
+      <div class="scroll-title">
+        <ul>
+          <li>
+            <label>剩余话费</label>
+            <div class="main-info">
+              <p>53.75</p>
+              <span>元</span>
+            </div>
+          </li>
+          <li>
+            <label>剩余流量</label>
+            <div class="main-info">
+              <p>4.08</p>
+              <span>GB</span>
+            </div>
+          </li>
+          <li>
+            <label>剩余语音</label>
+            <div class="main-info">
+              <p>190</p>
+              <span>分钟</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-bar">
+        <p>[截止2018／01／09 10：05]</p>
+        <i></i>
+        <i></i>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content-scroll" [ngStyle]="{'top':scrollToTop == true ? '':'45px'}" onscroll="getScrollTop()">
   <div class="all-info">
     <div class="home-tips">
       <p class="location-city">西安</p>
@@ -69,6 +124,193 @@
           </div>
         </li>
       </ul>
+    </div>
+  </div>
+  <div class="business-type">
+    <ul>
+      <li>
+        <i class="icon user"></i>
+        <p>老用户</p>
+      </li>
+      <li>
+        <i class="icon pay"></i>
+        <p>缴费充值</p>
+      </li>
+      <li>
+        <i class="icon earth"></i>
+        <p>国际漫游</p>
+      </li>
+      <li>
+        <i class="icon service"></i>
+        <p>客户服务</p>
+      </li>
+    </ul>
+  </div>
+  <div class="slide-ad">
+    <div class="slide-content">
+      <ion-slides pager>
+        <ion-slide>
+          <img class="img" src="../../assets/imgs/home/ad-1.jpg">
+        </ion-slide>
+        <ion-slide style="background-color: blue">
+          <img class="img" src="../../assets/imgs/home/ad-1.jpg">
+        </ion-slide>
+        <ion-slide style="background-color: red">
+          <img class="img" src="../../assets/imgs/home/ad-1.jpg">
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+  <div class="type-item">
+    <div class="type-title" (click)="goLiuLiang()">
+      <i class="icon water"></i>
+      <p>流量专区</p>
+    </div>
+    <div class="type-info">
+      <ul>
+        <li>
+          <div class="item-info">
+            <div class="item-name">
+              <div class="item-logo">
+                <img class="img" src="../../assets/imgs/home/sim.png">
+              </div>
+              <div class="item-tip">
+                <p>1元 = 500M</p>
+                <p>0月租 双卡槽必备</p>
+              </div>
+            </div>
+            <p>流浪日租卡</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-info">
+            <div class="item-name">
+              <div class="item-logo">
+                <img class="img" src="../../assets/imgs/home/sim.png">
+              </div>
+              <div class="item-tip">
+                <p>6GB 上网卡</p>
+                <p>月付仅需26元</p>
+              </div>
+            </div>
+            <p>流浪日租卡</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-info">
+            <div class="item-name">
+              <div class="item-logo">
+                <img class="img" src="../../assets/imgs/home/sim.png">
+              </div>
+              <div class="item-tip">
+                <p>1元 = 500M</p>
+                <p>0月租 双卡槽必备</p>
+              </div>
+            </div>
+            <p>流浪日租卡</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-info">
+            <div class="item-name">
+              <div class="item-logo">
+                <img class="img" src="../../assets/imgs/home/sim.png">
+              </div>
+              <div class="item-tip">
+                <p>1元 = 500M</p>
+                <p>0月租 双卡槽必备</p>
+              </div>
+            </div>
+            <p>流浪日租卡</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="business-item">
+      <ul>
+        <li>
+          <i class="icon"></i>
+          <p>上网记录</p>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <p>流量详单</p>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <p>流量提醒</p>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <p>我的流量包</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <div class="type-item">
+      <div class="type-title">
+        <i class="icon water"></i>
+        <p>热推业务</p>
+      </div>
+      <div class="type-info">
+        <ul>
+          <li>
+            <div class="item-info">
+              <div class="item-name">
+                <div class="item-logo">
+                  <img class="img" src="../../assets/imgs/home/sim.png">
+                </div>
+                <div class="item-tip">
+                  <p>升级4G</p>
+                  <p>快速升级</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-info">
+              <div class="item-name">
+                <div class="item-logo">
+                  <img class="img" src="../../assets/imgs/home/sim.png">
+                </div>
+                <div class="item-tip">
+                  <p>陕西专享</p>
+                  <p>乡党们看这里</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-info">
+              <div class="item-name">
+                <div class="item-logo">
+                  <img class="img" src="../../assets/imgs/home/sim.png">
+                </div>
+                <div class="item-tip">
+                  <p>历史账单</p>
+                  <p>消费记录明显</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-info">
+              <div class="item-name">
+                <div class="item-logo">
+                  <img class="img" src="../../assets/imgs/home/sim.png">
+                </div>
+                <div class="item-tip">
+                  <p>通话详单/p>
+                  <p>通话时间明细</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
