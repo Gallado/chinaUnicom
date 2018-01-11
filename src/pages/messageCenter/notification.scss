@@ -1,0 +1,59 @@
+notification{
+  .message-list{
+
+  }
+  .message-list ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #d5d5d5;
+    flex:1;
+    width: 100%;
+  }
+  .message-img{
+    width: 80px;
+    height: 80px;
+  }
+  .message-img img{
+    border-radius: 80px;
+  }
+  .message-info{
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+  }
+  .message-info .message-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+  .message-info .message-title p{
+    padding-right: 15px;
+
+  }
+  .message-info .message-title span{
+    border:1px solid #fff;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+  .main-info{
+
+  }
+  .main-info p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #a7a7a7;
+    padding: 5px 0;
+  }
+
+
+}

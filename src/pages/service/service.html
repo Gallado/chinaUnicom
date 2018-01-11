@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>服务</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="service-tab">
+    <div class="tab-list">
+      <ul>
+        <li [ngClass]="{'active':activeTabIndex == i}" (click)="selectTab(tabItem,i)" *ngFor="let tabItem of serviceData;let i = index;">
+          <p>{{tabItem.tabName}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div *ngFor="let content of serviceData;let x = index;">
+        <div class="content-item" *ngIf="activeTabIndex == x">
+          <div class="business-item" *ngFor="let item of content.tabContent;let y = index;" >
+            <div class="item-title">
+              <p (click)="goTitle(x,y)">{{item.busType}}</p>
+            </div>
+            <div class="item-list">
+              <ul>
+                <li *ngFor="let type of item.buslist">
+                  <i class="icon setting"></i>
+                  <p>{{type.name}}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</ion-content>

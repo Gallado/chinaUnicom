@@ -1,0 +1,24 @@
+
+
+<ion-content class="content" padding>
+  <div class="message-list">
+    <ul>
+      <li *ngFor="let item of dataList" (click)="goDetail(item)">
+        <div class="message-img">
+          <img class="img" src="../../assets/imgs/personCenter/login-Img.png">
+        </div>
+        <div class="message-info">
+          <div class="message-title">
+            <p>{{item.titleName}}</p>
+            <span *ngIf="item.status === 0" [ngStyle]="{'background-color':item.status === 0 ? 'red':''}">未读</span>
+            <span *ngIf="item.status === 1" [ngStyle]="{'background-color':item.status === 1 ? 'blue':''}">已读</span>
+          </div>
+          <div class="main-info">
+            <p >{{item.mainInfo}}</p>
+          </div>
+          <p>{{item.date}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ion-content>

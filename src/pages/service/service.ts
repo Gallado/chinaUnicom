@@ -1,0 +1,217 @@
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+@Component({
+  selector: 'page-service',
+  templateUrl: 'service.html'
+})
+export class ServicePage {
+  activeTabIndex = 0;
+  constructor(public navCtrl: NavController) {
+
+
+  }
+
+  serviceData =[{
+    "tabName":'查询',
+    "tabContent":[{
+      "busType":"基础业务查询",
+      "buslist":[{
+        "name":"我的基本信息"
+      },{
+        "name":"余量查询"
+      },{
+        "name":"积分查询"
+      },{
+        "name":"业务办理记录"
+      },{
+        "name":"电子发票查询及办理"
+      },{
+        "name":"资费专区"
+      },{
+        "name":"电子受理单查询"
+      },{
+        "name":"合约期查询"
+      },{
+        "name":"我已订购"
+      }]
+    },{
+      "busType":"流量业务查询",
+      "buslist":[{
+        "name":"上网记录"
+      },{
+        "name":"上网流量详单"
+      }]
+    },{
+      "busType":"宽带业务查询",
+      "buslist":[{
+        "name":"宽带装移修进度除阿勋"
+      },{
+        "name":"宽带账号查询"
+      }]
+    },{
+      "busType":"话费业务除查询",
+      "buslist":[{
+        "name":"实时话费"
+      },{
+        "name":"账户余额"
+      },{
+        "name":"历史账单"
+      },{
+        "name":"通话详单"
+      },{
+        "name":"缴费记录"
+      },{
+        "name":"信用额度"
+      }]
+    },{
+      "busType":"其他业务查询",
+      "buslist":[{
+        "name":"短信和彩信业务详单"
+      },{
+        "name":"代收费"
+      },{
+        "name":"增值业务详单"
+      },{
+        "name":"沃商店详单"
+      }]
+    }]
+  },{
+    "tabName":'交费',
+    "tabContent":[{
+      "busType":"交费",
+      "buslist":[{
+        "name":"交费充值"
+      },{
+        "name":"充值卡充值"
+      },{
+        "name":"交费订单"
+      },{
+        "name":"话费代扣"
+      },{
+        "name":"永不停机"
+      }]
+    }]
+  },{
+    "tabName":'办理',
+    "tabContent":[{
+      "busType":"基础业务办理",
+      "buslist":[{
+        "name":"通话设置"
+      },{
+        "name":"服务密码修改"
+      },{
+        "name":"停机保号／复机"
+      },{
+        "name":"挂失／解挂"
+      }]
+    },{
+      "busType":"流量语音加油包",
+      "buslist":[{
+        "name":"流量月包"
+      },{
+        "name":"流量半年包"
+      },{
+        "name":"假日流量包"
+      },{
+        "name":"定向流量包"
+      },{
+        "name":"畅视"
+      },{
+        "name":"国际流量包"
+      }]
+    },{
+      "busType":"套餐变更",
+      "buslist":[{
+        "name":"老用户升级4G"
+      },{
+        "name":"升级4G状态查询"
+      }]
+    },{
+      "busType":"国际／港澳台业务",
+      "buslist":[{
+        "name":"开关长途业务"
+      },{
+        "name":"长途套餐办理"
+      },{
+        "name":"开关漫游业务"
+      },{
+        "name":"漫游套餐办理"
+      }]
+    },{
+      "busType":"其他业务办理",
+      "buslist":[{
+        "name":"增值业务办理"
+      },{
+        "name":"话费代扣"
+      },{
+        "name":"空中入网"
+      },{
+        "name":"合作渠道订单激活"
+      }]
+    }]
+  },{
+    "tabName":'客服',
+    "tabContent":[{
+      "busType":"投诉和网络反馈",
+      "buslist":[{
+        "name":"网络问题反馈"
+      },{
+        "name":"客服"
+      },{
+        "name":"沃知道"
+      },{
+        "name":"问卷调查"
+      },{
+        "name":"国际漫游调查"
+      },{
+        "name":"客户俱乐部"
+      }]
+    }]
+  },{
+    "tabName":'生活',
+    "tabContent":[{
+      "busType":"联通服务",
+      "buslist":[{
+        "name":"附近营业厅"
+      },{
+        "name":"号码归属地"
+      },{
+        "name":"读书"
+      },{
+        "name":"沃邮箱"
+      },{
+        "name":"沃家总管"
+      },{
+        "name":"查号码"
+      }]
+    },{
+      "busType":"金融服务",
+      "buslist":[{
+        "name":"金融服务"
+      },{
+        "name":"招行王者行用卡"
+      },{
+        "name":"工行融e联"
+      }]
+    },{
+      "busType":"生活福利",
+      "buslist":[{
+        "name":"领取免费流量"
+      },{
+        "name":"旧机换话费"
+      },{
+        "name":"特权中心"
+      }]
+    }]
+  }];
+  selectTab = function(data,index){
+    this.activeTabIndex = index;
+
+  };
+  goTitle = function(outIndex,inIndex){
+    console.log(inIndex);
+
+  }
+
+}

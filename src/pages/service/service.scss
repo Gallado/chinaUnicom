@@ -1,0 +1,95 @@
+page-service{
+  .service-tab{
+    display: flex;
+    flex-direction: row;
+  }
+  .tab-list{
+    background-color: #a7a7a7;
+    position: fixed;
+    top: 58px;
+    left: 0;
+    bottom: 0;
+
+  }
+  .tab-list ul{
+
+  }
+  .tab-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 45px;
+    border-left: 2px solid transparent;
+
+  }
+  .tab-list ul li p{
+
+  }
+  .active{
+    border-left: 2px solid red !important;
+    background-color: #fff;
+    color: red;
+  }
+
+  .tab-content{
+    background-color: #fff;
+    flex:1;
+    position: absolute;
+    left: 80px;
+    right: 0;
+    top: 0;
+    overflow: auto;
+    min-height: 100%;
+  }
+  .tab-content .content-item{
+
+  }
+  .tab-content .content-item .business-item{
+
+  }
+  .tab-content .content-item .business-item .item-title{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .tab-content .content-item .business-item .item-title p{
+
+  }
+  .item-list{
+
+  }
+  .item-list ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .item-list ul li{
+    flex: 0.3333;
+    min-width: 33.3333%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+
+  }
+  .item-list ul li p{
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 10px;
+
+  }
+
+  .setting{
+    background-image: url(../../assets/imgs/personCenter/setting.png);
+    width: 24px;
+    height: 24px;
+  }
+
+}
